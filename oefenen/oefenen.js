@@ -1,4 +1,3 @@
-
 const eenheden = ["mm", "cm", "dm", "m", "dam", "hm", "km"];
 //index             0     1     2    3     4      5     6
 //eenheden[3] = "m"
@@ -52,3 +51,5 @@ function check() {
     else
         alert("FOUT!")
 }
+let trying = Decimal(10);
+console.log(trying.toNumber());
