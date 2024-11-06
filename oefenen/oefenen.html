@@ -15,7 +15,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand nav-item" href="../index.html">Home</a>
+                <a class="navbar-brand" href="/">TEK</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -24,16 +24,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="../eenhedenomrekenen/eenhedenomrekenen.html">Eenhedenomrekenen</a>
+                            <a class="nav-link active" aria-current="page" href="eenhedenomrekenen/">Eenheden</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="oefenen.html">Oefenen</a>
+                            <a class="nav-link" href="#">Procenten</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../verhoudingen/verhoudingen.html">Verhoudingen</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../procenten/procenten.html">Procenten</a>
+                        <li class="nav-item"></li>
+                        <a class="nav-link" href="#">Verhoudingen</a>
                         </li>
                     </ul>
                 </div>
@@ -44,14 +41,16 @@
             <div class="col-6">
                 <div class="card text-center">
                     <div class="card-header">
-                        <h4>Unit Convert Practice</h4>
+                        <h4>Eenheden omreken oefenapp</h4>
                     </div>
                     <div class="card-body">
                         <select class="form-select" id="dimselect" onchange="nieuw()">
-                            <option value="1">1D (length)</option>
-                            <option value="2">2D (area)</option>
-                            <option value="3">3D (volume)</option>
+                            <!-- <option value="0">Maak een keuze...</option> -->
+                            <option value="1">1D (lengte)</option>
+                            <option value="2">2D (oppervlakte)</option>
+                            <option value="3">3D (inhoud)</option>
                         </select>
+
                         <div class="row mt-2">
                             <div class="col-4">
                                 <div class="input-group mb-3">
@@ -70,20 +69,25 @@
                         <div class="row">
                             <div class="col-6 d-grid"><button class="btn btn-success" onclick="check()">Check</button>
                             </div>
-                            <div class="col-6 d-grid"><button class="btn btn-primary" onclick="nieuw()">New</button>
+                            <div class="col-6 d-grid"><button class="btn btn-primary" onclick="nieuw()">Nieuw</button>
                             </div>
                         </div>
+
+
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        &copy; 2024 by Eren Kurt
                     </div>
                 </div>
             </div>
-            <div class="col-3"></div>
+            <div id="history" class="col-3"></div>
         </div>
 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.3.1/decimal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.3.1/decimal.min.js"></script>
     <script src="oefenen.js"></script>
 </body>
 
