@@ -34,8 +34,8 @@ function nieuw() {
     verschil = Decimal.abs(randomnmbr - randomnmbr2);
     let factortotaal = new Decimal(Decimal.pow(factor, verschil));
     console.log("factortotaal = " + factortotaal);
-    
-    if(randomnmbr < randomnmbr2) {
+
+    if (randomnmbr < randomnmbr2) {
         berekendeantw = Decimal.div(opgdec, factortotaal);
     } else {
         berekendeantw = Decimal.mul(opgdec, factortotaal);
@@ -45,13 +45,16 @@ function nieuw() {
 
 function check() {
     //nodig: opgave.value, die moet naar hist.innerHTML
-    hist.innerHTML += opgave.value;
-    hist.innerHTML += " " + opgeenheid.innerText; //hier moet opgeenheid komen
-    hist.innerHTML += " = ";
-    hist.innerHTML += antwoord.value;
-    hist.innerHTML += " " + antweenheid.innerText; //hier moet antweenheid komen
-    if(berekendeantw.equals(antwoord.value))
-        hist.innerHTML += " GOED<br>";
+    let hele_opg_antw = opgave.value + " " + opgeenheid.innerHTML + " = " +
+        antwoord.value + " " + antweenheid.innerHTML
+    // hist.innerHTML += opgave.value;
+    // hist.innerHTML += " " + opgeenheid.innerHTML; //hier moet opgeenheid komen
+    // hist.innerHTML += " = ";
+    // hist.innerHTML += antwoord.value;
+    // hist.innerHTML += " " + antweenheid.innerHTML; //hier moet antweenheid komen
+    if (berekendeantw.equals(antwoord.value))
+        hist.innerHTML += "<p class='bg-success text-white p-2 rounded-2'>" + hele_opg_antw + "</p>";
     else
-        hist.innerHTML += " FOUT<br>";
+        hist.innerHTML += "<p class='bg-danger text-white p-2'>" + hele_opg_antw + "</p>";
+    nieuw();
 }
